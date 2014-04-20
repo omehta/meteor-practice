@@ -1,0 +1,33 @@
+<head>
+  <title>this is the stuff</title>
+</head>
+
+<body>
+
+	  <h1>Hello Ojas!</h1>
+	  {{greeting}}
+	  <input type="button" value="Click" />
+
+	<h1> my favourite colours </h1>
+	{{> color_list}}
+	
+	{{>loginButtons}} 
+	
+</body>
+
+<template name="color_list">
+	{{#each colors}}
+	<ul>
+		{{> color_info}}
+	</ul>
+	{{else}}
+	No colors yet.
+	{{/each}}
+</template>
+
+<template name="color_info">
+	<li class="{{maybe_selected}}">
+		{{name}}
+	</li>
+</template>
+	
